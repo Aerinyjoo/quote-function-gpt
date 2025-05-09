@@ -1,0 +1,23 @@
+openapi: 3.1.0
+info:
+  title: Quote API
+  version: 1.0.0
+servers:
+  - url: https://your-render-url.onrender.com
+paths:
+  /quote:
+    get:
+      operationId: get_quote
+      summary: Get a random inspirational quote
+      responses:
+        '200':
+          description: A random quote
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  quote:
+                    type: string
+                  author:
+                    type: string
